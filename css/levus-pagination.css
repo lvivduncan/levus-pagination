@@ -9,9 +9,36 @@
 }
 
 /* styles */
-.levus-pagination{
+.levus-pagination-items{
     display:grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap:10px;
 }
 
+.levus-pagination-items .levus-item{
+    border: 1px solid red;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /**/
+    height: 100px;
+}
+
+.levus-pagination-items .hide{
+    display: none;
+}
+
+.levus-pagination-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.levus-pagination-nav span{
+    padding: 5px 10px;
+    margin: 0 5px;
+    background: red;
+    color: white;
+    cursor:pointer;
+}
