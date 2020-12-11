@@ -33,7 +33,11 @@ function levusPagination(number){
 
     nav.addEventListener('click', e => {
         if(e.target.tagName == 'SPAN'){
-            const n = e.target.textContent;
+
+            // поточний 
+            const current = e.target;
+
+            const n = current.textContent;
 
             // для порівняння нижче міняємо значення каунтера по кліку
             counter = n-1;
@@ -48,8 +52,12 @@ function levusPagination(number){
                 }
             });
 
+            const child = current.parentNode.children;
+
+            [...child].forEach(span => span.className = '');
+
             // підсвітка кнопки навігації
-            
+            current.className = 'active';
 
         }
     });

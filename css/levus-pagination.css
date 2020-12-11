@@ -38,7 +38,11 @@
 .levus-pagination-nav span{
     padding: 5px 10px;
     margin: 0 5px;
-    background: red;
+    background: black;
     color: white;
     cursor:pointer;
+}
+
+.levus-pagination-nav .active{
+    background: red;
 }
