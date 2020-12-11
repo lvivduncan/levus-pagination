@@ -29,8 +29,12 @@ function levusPagination(number) {
   
   // виводимо сторінки
   for (var i = 1; i <= pages; i++) {
-    nav.innerHTML += "<span>".concat(i, "</span>");
-  } // 
+    if (i === 1) {
+      nav.innerHTML += "<span class=\"active\">".concat(i, "</span>");
+    } else {
+      nav.innerHTML += "<span>".concat(i, "</span>");
+    }
+  }
 
   var counter = 0;
 

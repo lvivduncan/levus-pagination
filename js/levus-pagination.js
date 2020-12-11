@@ -15,10 +15,13 @@ function levusPagination(number){
 
     // виводимо сторінки
     for(let i = 1; i <= pages; i++){
-        nav.innerHTML += `<span>${i}</span>`;
+        if(i === 1){
+            nav.innerHTML += `<span class="active">${i}</span>`;
+        } else {
+            nav.innerHTML += `<span>${i}</span>`;
+        }
     }
 
-    // 
     let counter = 0;
 
     el.forEach((item,i) => {
