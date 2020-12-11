@@ -11,7 +11,7 @@ function levusPagination(number){
     const nav = wrap.querySelector('.levus-pagination-nav');
 
     // кількість сторінок
-    const pages = Math.round(el.length / number);
+    const pages = Math.ceil(el.length / number);
 
     // виводимо сторінки
     for(let i = 1; i <= pages; i++){
@@ -35,7 +35,7 @@ function levusPagination(number){
         if(e.target.tagName == 'SPAN'){
             const n = e.target.textContent;
 
-            // міняємо значення каунтера по кліку
+            // для порівняння нижче міняємо значення каунтера по кліку
             counter = n-1;
 
             el.forEach((item,i) => {
@@ -48,11 +48,12 @@ function levusPagination(number){
                 }
             });
 
+            // підсвітка кнопки навігації
+            
 
         }
     });
 
-    
 }
 
-levusPagination(8);
+levusPagination(12);
