@@ -35,11 +35,15 @@ function levusPagination(number){
         if(e.target.tagName == 'SPAN'){
             const n = e.target.textContent;
 
+            // міняємо значення каунтера по кліку
+            counter = n-1;
+
             el.forEach((item,i) => {
                 // усі ховаємо
                 item.classList.add('hide');
         
-                if(i<number*n){
+                // показуємо тільки обрані
+                if(i<number*n && i>=number*counter){
                     item.classList.remove('hide');
                 }
             });
