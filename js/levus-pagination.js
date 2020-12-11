@@ -64,4 +64,4 @@ function levusPagination(number){
 
 }
 
-levusPagination(12);
+levusPagination(8);
